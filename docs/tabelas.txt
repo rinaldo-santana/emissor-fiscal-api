@@ -1,0 +1,11 @@
+CREATE TABLE `endereco` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `logradouro` varchar(200) NOT NULL,
+  `numero` varchar(5) NOT NULL,
+  `cep` int(8) NOT NULL,
+  `complemento` int(199) NOT NULL,
+  `bairro` int(30) NOT NULL,
+  `cidade` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+

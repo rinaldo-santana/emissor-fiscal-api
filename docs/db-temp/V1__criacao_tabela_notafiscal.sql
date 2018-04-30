@@ -1,0 +1,31 @@
+
+CREATE TABLE notafiscal (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    empresa_id BIGINT NOT NULL,
+    modelo VARCHAR(2) NOT NULL,
+    serie INT NOT NULL,
+    numero BIGINT NOT NULL,
+    data_emissao DATE NOT NULL,
+    hora_emissao TIME,
+    natureza_operacao_id INT NOT NULL,
+    cliente_id BIGINT NOT NULL,
+    chave_eletronica VARCHAR(44),
+    protocolo_nfe_id BIGINT,
+    status VARCHAR(45),
+    valor_base_icms BIGINT,       
+    valor_icms BIGINT,
+    valor_base_icms_st BIGINT,
+    valor_icms_st BIGINT,
+    valor_produtos BIGINT,
+    valor_frete BIGINT,
+    valor_seguro BIGINT,
+    valor_desconto BIGINT,
+    valor_ipi BIGINT,
+    valor_pis BIGINT,
+    valor_cofins BIGINT,
+    valor_outros BIGINT,
+    valor_nota_fiscal BIGINT,
+    valor_aprox_tributos BIGINT,    
+    CONSTRAINT uc_notafiscal UNIQUE (empresa_id, modelo, serie, numero)
+);
+
